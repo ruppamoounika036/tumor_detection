@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Website</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/predict">Predict</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="content">
+                <a href="/predict" class="btn">Predict Tumor</a>
+                <h1>Brain Tumor Detection</h1>
+                <p>Brain cancer is one of the dangerous diseases globally.
+                    Various image techniques<br> such as Computed Tomography (CT), Magnetic  Resonance Imaging (MRI)<br> and ultrasound image are used to evaluate the  tumor in a brainIn this work,<br> automatic brain tumor detection is proposed by using
+                    Convolutional Neural <br>Networks (CNN) classification.  It helps in early detection of brain tumors
+                    </p>
+                <div class="arrow-icons">
+                    <img src="{{url_for('static', filename='images/back-arrow.png')}}">
+                    <a href="/predict"><img src="{{url_for('static', filename='images/next-arrow.png')}}" ></a>
+                </div>
+            </div>
+            <img src="{{url_for('static', filename='images/brain_icon.svg')}}" class="feature-img">
+        </div>
+    </body>
+</html>
